@@ -3,15 +3,46 @@
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=chestertood" alt="chestertood" /></a> </p>
 
-- 🌱 I’m currently learning **NLP,LLM models and improving backend skills ֎🇦🇮**
+<h2> 👨🏻‍💻 &nbsp;A Little Bit About Me and My Interests</h2>
 
-- 👯 I’m looking to collaborate on **AI ,Data Science ,Computer vision Projects 🤖🧠🇦🇮👾**
+```yaml
+name: Piyush Malhotra
+located_in: Calgary, Alberta
+current_job: Full Stack Developer
+education:
+  [
+    "Self-Taught Developer and Designer",
+    "Master's in Electrical and Computer Engineering",
+    "Bachelor's in Electronics and Communication",
+  ]
+company: Soulber
 
-- 📫 How to reach me **chestertood@gmail.com**
-
-- 📄 Know about my experiences [file:///C:/Users/chest/OneDrive/Desktop/Resume_Pichayapazz.pdf](file:///C:/Users/chest/OneDrive/Desktop/Resume_Pichayapazz.pdf)
-
-- ⚡ Fun fact **Meow ≽^•⩊•^≼**
+fields_of_interests:
+  [
+    "Web Development",
+    "Data Science",
+    "Machine Learning",
+    "UI/UX",
+    "Game Development",
+    "DevOps",
+  ]
+technical_background:
+  [
+    "Full Stack Developer"
+    "DevOps Solutions Architect",
+    "Intern - Data Science & Machine Learning in Python",
+    "Intern - Internet Of Things",
+    "Intern - VLSI and FPGA Implementation",
+  ]
+  
+currently_learning: ["Docker, Kubernetes, and React Native"]
+2024 Goals: ["Create 25+ Projects and learn at least 5-10 new Technologies."]
+hobbies: ["Gaming", "Cinema", "Skateboarding", "Art", "Comedy"]
+```
+  
+---  
+  
+<h2> 🚀 &nbsp;Some Tools I Have Used and Learned</h2>
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
