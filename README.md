@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Chester</h1>
 <h3 align="center">⚙️⚙️ A passionate machine learning engineer ⚙️⚙️</h3>
 
-- 🌱 I’m currently learning **NLP,LLM models and improving backend skills**
+- 🌱 I’m currently learning **֎🇦🇮 NLP,LLM models and improving backend skills ֎🇦🇮**
 
 - 👯 I’m looking to collaborate on **🤖🧠🇦🇮👾 AI ,Data Science ,Computer vision Projects 🤖🧠🇦🇮👾**
 
