@@ -5,9 +5,11 @@
 
 - 🌱 I’m currently learning **NLP,LLM models and improving backend skills ֎🇦🇮**
 
-- 👯 I’m looking to collaborate on **🤖🧠🇦🇮👾 AI ,Data Science ,Computer vision Projects 🤖🧠🇦🇮👾**
+- 👯 I’m looking to collaborate on **AI ,Data Science ,Computer vision Projects 🤖🧠🇦🇮👾**
 
 - 📫 How to reach me **chestertood@gmail.com**
+
+- 📄 Know about my experiences [file:///C:/Users/chest/OneDrive/Desktop/Resume_Pichayapazz.pdf](file:///C:/Users/chest/OneDrive/Desktop/Resume_Pichayapazz.pdf)
 
 - ⚡ Fun fact **Meow ≽^•⩊•^≼**
 
