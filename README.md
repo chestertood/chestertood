@@ -7,7 +7,7 @@
 ### 🔥 About Me  
 - 🌱 **Currently learning:** NLP, LLM Models & Backend Development  
 - 🤝 **Looking to collaborate on:** AI, Data Science & Computer Vision Projects  
-- 📫 **Reach me at:** chestertood@gmail.com  
+- 📫 **Reach me at:** chestertood@gmail.com  Phone:097-284-7195
 - ⚡ **Fun fact:** Meow ≽^•⩊•^≼  
 
 ---
