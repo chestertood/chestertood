@@ -16,7 +16,7 @@
 
 <p align="left">
   <a href="https://linkedin.com/in/pichayapazz-naewthong-127025355/" target="blank">
-    <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="linkedin" height="100" width="40" />
+    <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="linkedin" height="30" width="40" />
   </a>
   <a href="https://stackoverflow.com/users/29978405/05พิชญพรรษ-เเนวทอง" target="blank">
     <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" alt="stackoverflow" height="30" width="40"/>     </a>
