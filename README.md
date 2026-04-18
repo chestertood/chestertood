@@ -13,48 +13,35 @@
 ---
 
 ### 🌍 Connect with me  
-<table id="no-border">
+<table border="0">
   <tr>
-    <td><a href="https://www.arduino.cc/"><img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" width="40" height="40"/></a></td>
-    <td><a href="https://www.figma.com/"><img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" width="40" height="40"/></a></td>
-    <td><a href="https://git-scm.com/"><img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" width="40" height="40"/></a></td>
-    <td><a href="https://www.linux.org/"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" width="40" height="40"/></a></td>
-    <td><a href="https://www.mathworks.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" width="40" height="40"/></a></td>
-    <td><a href="https://www.photoshop.com/"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-line.svg" width="40" height="40"/></a></td>
-    <td><a href="https://postman.com"><img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" width="40" height="40"/></a></td>
-    <td><a href="https://zapier.com"><img src="https://www.vectorlogo.zone/logos/zapier/zapier-icon.svg" width="40" height="40"/></a></td>
+    <td>
+      <a href="https://linkedin.com/in/pichayapazz-naewthong-127025355/" target="blank">
+        <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" width="40" />
+      </a>
+    </td>
+    <td>
+      <a href="https://stackoverflow.com/users/29978405/05พิชญพรรษ-เเนวทอง" target="blank">
+        <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" width="40" />
+      </a>
+    </td>
+    <td>
+      <a href="https://kaggle.com/chestertood" target="blank">
+        <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/kaggle.svg" width="40" />
+      </a>
+    </td>
+    <td>
+      <a href="https://fb.com/chestertood" target="blank">
+        <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="facebook" height="30" width="40" />
+      </a>
+    </td>
+    <td>
+      <a href="https://instagram.com/chesterxpazz" target="blank">
+        <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="instagram" height="30" width="40" />
+      </a>
+    </td>
   </tr>
 </table>
-  <table border="0">
-    <tr>
-      <td>
-        <a href="https://linkedin.com/in/pichayapazz-naewthong-127025355/" target="blank">
-          <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" width="40" />
-        </a>
-      </td>
-      <td>
-        <a href="https://stackoverflow.com/users/29978405/05พิชญพรรษ-เเนวทอง" target="blank">
-          <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" width="40" />
-        </a>
-      </td>
-      <td>
-        <a href="https://kaggle.com/chestertood" target="blank">
-          <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/kaggle.svg" width="40" />
-        </a>
-      </td>
-      <td>
-        <a href="https://fb.com/chestertood" target="blank">
-          <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="facebook" height="30" width="40" />
-        </a>
-      </td>
-      <td>
-        <a href="https://instagram.com/chesterxpazz" target="blank">
-          <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="instagram" height="30" width="40" />
-        </a>
-      </td>
-    </tr>
-  </table>
-</p>
 
 ---
 
