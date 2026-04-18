@@ -46,10 +46,6 @@
   </table>
 </p>
 
-
-
-
-
 ---
 
 ### 🛠️ Tech Stack  
