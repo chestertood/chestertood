@@ -30,6 +30,25 @@
     <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="instagram" height="30" width="40" />
   </a>
 </p>
+<table border="0">
+  <tr>
+    <td>
+      <a href="https://linkedin.com/in/pichayapazz-naewthong-127025355/" target="blank">
+        <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" width="40" />
+      </a>
+    </td>
+    <td>
+      <a href="https://stackoverflow.com/users/29978405/05พิชญพรรษ-เเนวทอง" target="blank">
+        <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" width="40" />
+      </a>
+    </td>
+    <td>
+      <a href="https://kaggle.com/chestertood" target="blank">
+        <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/kaggle.svg" width="40" />
+      </a>
+    </td>
+  </tr>
+</table>
 
 
 
