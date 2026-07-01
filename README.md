@@ -186,8 +186,8 @@
 ---
 
 ### 📊 GitHub Stats  
-<p align="center">
-  <img src="[https://github-readme-stats.vercel.app/api?username=chestertood&show_icons=true&theme=radical](https://github-stats-extended.vercel.app/api?username=chestertood&show_icons=true&theme=radical)" width="48%" alt="GitHub Stats"/>
+<p align="center">  
+  <img src="https://github-stats-extended.vercel.app/api?username=chestertood&show_icons=true&theme=radical" width="48%" alt="GitHub Stats"/>
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=chestertood&layout=compact&theme=radical" width="48%" alt="Top Languages"/>
 </p>  
 
