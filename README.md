@@ -7,7 +7,7 @@
 ### 🔥 About Me  
 - 🌱 **Currently learning:** NLP, LLM Models & Backend Development  
 - 🤝 **Looking to collaborate on:** AI, Data Science & Computer Vision Projects  
-- 📫 **Reach me at:** chestertood@gmail.com  Phone: 097-284-7195
+- 📫 **Reach me at:** [chestertood@gmail.com](mailto:chestertood@gmail.com)  
 - ⚡ **Fun fact:** Meow ≽^•⩊•^≼  
 
 ---
@@ -21,7 +21,7 @@
       </a>
     </td>
     <td>
-      <a href="https://stackoverflow.com/users/29978405/05พิชญพรรษ-เเนวทอง" target="blank">
+      <a href="https://stackoverflow.com/users/29978405" target="blank">
         <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" width="40" />
       </a>
     </td>
@@ -61,7 +61,7 @@
     </td>
     <td align="center">
       <a href="https://opencv.org/" target="_blank" rel="noreferrer">
-        <img src="https://www.vectorlogo.zone/logos/opencv/opencv-icon.svg" alt="opencv" width="40" height="40"/>
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/opencv/opencv-original.svg" alt="opencv" width="40" height="40"/>
       </a>
     </td>
     <td align="center">
@@ -76,12 +76,12 @@
     </td>
     <td align="center">
       <a href="https://pytorch.org/" target="_blank" rel="noreferrer">
-        <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="pytorch" width="40" height="40"/>
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pytorch/pytorch-original.svg" alt="pytorch" width="40" height="40"/>
       </a>
     </td>
     <td align="center">
       <a href="https://scikit-learn.org/" target="_blank" rel="noreferrer">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="scikit_learn" width="40" height="40"/>
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/scikitlearn/scikitlearn-original.svg" alt="scikit_learn" width="40" height="40"/>
       </a>
     </td>
     <td align="center">
@@ -91,7 +91,7 @@
     </td>
     <td align="center">
       <a href="https://www.tensorflow.org" target="_blank" rel="noreferrer">
-        <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="tensorflow" width="40" height="40"/>
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tensorflow/tensorflow-original.svg" alt="tensorflow" width="40" height="40"/>
       </a>
     </td>
   </tr>
@@ -102,12 +102,12 @@
   <tr>
     <td align="center">
       <a href="https://firebase.google.com/" target="_blank" rel="noreferrer">
-        <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40"/>
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/firebase/firebase-plain.svg" alt="firebase" width="40" height="40"/>
       </a>
     </td>
     <td align="center">
       <a href="https://cloud.google.com" target="_blank" rel="noreferrer">
-        <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-icon.svg" alt="gcp" width="40" height="40"/>
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/googlecloud/googlecloud-original.svg" alt="gcp" width="40" height="40"/>
       </a>
     </td>
     <td align="center">
@@ -133,26 +133,22 @@
   </tr>
 </table>
 
-
-
-#### **Software & Other**  
-### 🛠 Tools & Others
-
+#### **Tools & Others**
 <table>
   <tr>
     <td align="center">
       <a href="https://www.arduino.cc/" target="_blank" rel="noreferrer">
-        <img src="https://cdn.worldvectorlogo.com/logos/arduino-1.svg" alt="arduino" width="40" height="40"/>
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/arduino/arduino-original.svg" alt="arduino" width="40" height="40"/>
       </a>
     </td>
     <td align="center">
       <a href="https://www.figma.com/" target="_blank" rel="noreferrer">
-        <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/>
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg" alt="figma" width="40" height="40"/>
       </a>
     </td>
     <td align="center">
       <a href="https://git-scm.com/" target="_blank" rel="noreferrer">
-        <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/>
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" alt="git" width="40" height="40"/>
       </a>
     </td>
     <td align="center">
@@ -172,7 +168,7 @@
     </td>
     <td align="center">
       <a href="https://postman.com" target="_blank" rel="noreferrer">
-        <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40"/>
+        <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postman/postman-original.svg" alt="postman" width="40" height="40"/>
       </a>
     </td>
     <td align="center">
@@ -193,4 +189,4 @@
 
 ---
 
-🎯 **⬇⬇ My Project ⬇⬇** 🚀  
+🎯 **⬇⬇ My Project ⬇⬇** 🚀
