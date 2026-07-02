@@ -56,8 +56,8 @@
 
 ### 📊 GitHub Stats  
 <p align="center">  
-  <img src="https://github-stats-extended.vercel.app/api?username=chestertood&show_icons=true&theme=radical" width="48%" alt="GitHub Stats"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=chestertood&layout=compact&theme=radical" width="48%" alt="Top Languages"/>
+  <img src="https://github-stats-extended.vercel.app/api?username=chestertood&show_icons=true&theme=radical" width="410" height="195" alt="GitHub Stats"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=chestertood&layout=compact&theme=radical" width="410" height="195" alt="Top Languages"/>
 </p>  
 
 ---
