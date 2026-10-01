@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/card.gif" alt="Chester. ML Engineer, AI and Robotics, Khon Kaen University. Animated pixel-style player card: a white cat licking its paw, GitHub stats, top 3 repositories with gold, silver and bronze medals, and tech stack Python, LLM, CV, React, C#." width="480" />
+  <img src="./assets/card.gif" alt="Chester. ML Engineer, AI and Robotics, Khon Kaen University. Animated pixel-style player card: a white cat licking its paw, GitHub stats, top 3 repositories with gold, silver and bronze medals, and tech stack Python, LLM, CV, React, C#." width="100%" />
 </p>
 
 <p align="center">
