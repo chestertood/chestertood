@@ -1,4 +1,4 @@
-"""Render the pixel profile card: data/stats.json + config/profile.json -> assets/card.gif.
+"""Render the pixel profile card: data/stats.json + config/profile.json -> assets/card-{light,dark}.gif.
 
 Draws on a small 400px canvas with an unantialiased pixel font, then upscales
 with nearest-neighbour so every logical pixel stays a crisp square. The cat
@@ -16,9 +16,25 @@ ROOT = Path(__file__).resolve().parent.parent
 FONT = ROOT / "assets" / "fonts" / "PressStart2P-Regular.ttf"
 W, SCALE, M, CAT_PX = 400, 3, 12, 3  # logical width, upscale factor, margin, cat pixel size
 
-BG, PANEL, FG, DIM = (20, 16, 31), (30, 25, 48), (232, 230, 240), (125, 122, 153)
-GREEN, PINK, CYAN, YELLOW, ORANGE = (124, 255, 107), (255, 95, 162), (94, 231, 255), (255, 216, 74), (255, 150, 60)
-LANG_COLORS = [CYAN, GREEN, YELLOW, PINK, ORANGE]
+# name -> (BG, PANEL, FG, DIM, GREEN, PINK, CYAN, YELLOW, ORANGE, cat fur, cat outline)
+THEMES = {
+    "light": ((226, 234, 255), (196, 208, 240), (30, 28, 60), (96, 102, 148),
+              (30, 150, 70), (225, 50, 130), (0, 125, 190), (214, 140, 0), (230, 110, 30),
+              (255, 255, 255), (112, 118, 165)),
+    "dark": ((20, 16, 31), (30, 25, 48), (232, 230, 240), (125, 122, 153),
+             (124, 255, 107), (255, 95, 162), (94, 231, 255), (255, 216, 74), (255, 150, 60),
+             (250, 250, 255), (176, 178, 208)),
+}
+
+
+def set_theme(name):
+    """Swap the module-level palette (render() and helpers read these globals at call time)."""
+    global BG, PANEL, FG, DIM, GREEN, PINK, CYAN, YELLOW, ORANGE, LANG_COLORS
+    BG, PANEL, FG, DIM, GREEN, PINK, CYAN, YELLOW, ORANGE, cat.W, cat.G = THEMES[name]
+    LANG_COLORS = [CYAN, GREEN, YELLOW, PINK, ORANGE]
+
+
+set_theme("light")
 RIBBON = ((235, 60, 70), (170, 28, 45), (255, 130, 130))  # base / shade / highlight
 # metals: (light, base, dark, edge) for gold / silver / bronze
 MEDALS = [((255, 238, 150), (255, 208, 64), (214, 150, 30), (120, 76, 14)),
@@ -234,9 +250,11 @@ def render(stats, cfg):
 if __name__ == "__main__":
     stats = json.loads((ROOT / "data" / "stats.json").read_text(encoding="utf-8"))
     cfg = json.loads((ROOT / "config" / "profile.json").read_text(encoding="utf-8"))
-    out = ROOT / "assets" / "card.gif"
-    frames = render(stats, cfg)
-    pal = [f.quantize(colors=64, dither=Image.Dither.NONE) for f, _ in frames]
-    pal[0].save(out, save_all=True, append_images=pal[1:], duration=[ms for _, ms in frames],
-                loop=0, disposal=1)
-    print("wrote", out, f"{out.stat().st_size // 1024} KB")
+    for theme in THEMES:
+        set_theme(theme)
+        out = ROOT / "assets" / f"card-{theme}.gif"
+        frames = render(stats, cfg)
+        pal = [f.quantize(colors=64, dither=Image.Dither.NONE) for f, _ in frames]
+        pal[0].save(out, save_all=True, append_images=pal[1:], duration=[ms for _, ms in frames],
+                    loop=0, disposal=1)
+        print("wrote", out, f"{out.stat().st_size // 1024} KB")
