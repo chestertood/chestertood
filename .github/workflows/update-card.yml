@@ -1,0 +1,36 @@
+name: update-card
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [scripts/**, config/**, assets/fonts/**]
+
+permissions:
+  contents: write
+
+jobs:
+  card:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pillow pytest
+      - run: pytest -q
+      - run: python scripts/fetch_stats.py
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: python scripts/build_card.py
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/card.gif data/stats.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: refresh profile card"
+            git push
+          fi

@@ -1,0 +1,27 @@
+{
+  "login": "chestertood",
+  "name": "CHESTER",
+  "role": "ML ENGINEER | AI | ROBOTICS",
+  "school": "KHON KAEN UNIV / ROBOTICS ENGINEERING",
+  "stack": [
+    "Python",
+    "LLM",
+    "CV",
+    "React",
+    "C#"
+  ],
+  "caps": {
+    "stars": 50,
+    "commits": 1000,
+    "prs": 100,
+    "followers": 100
+  },
+  "excludeRepos": [
+    "chestertood"
+  ],
+  "featuredRepos": [
+    "smart-fertilizer-ai",
+    "Lung_cancer_risk_project",
+    "Machine_Program-C--WPF-"
+  ]
+}

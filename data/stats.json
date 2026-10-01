@@ -1,0 +1,47 @@
+{
+  "login": "chestertood",
+  "fetched_at": "2026-10-01",
+  "followers": 2,
+  "repos": 13,
+  "stars": 14,
+  "commits": 112,
+  "prs": 1,
+  "issues": 0,
+  "reviews": 0,
+  "top_repos": [
+    {
+      "name": "smart-fertilizer-ai",
+      "stars": 1,
+      "languages": [
+        [
+          "Python",
+          235043
+        ],
+        [
+          "Batchfile",
+          467
+        ]
+      ]
+    },
+    {
+      "name": "Lung_cancer_risk_project",
+      "stars": 1,
+      "languages": [
+        [
+          "Python",
+          61912
+        ]
+      ]
+    },
+    {
+      "name": "Machine_Program-C--WPF-",
+      "stars": 1,
+      "languages": [
+        [
+          "C#",
+          164100
+        ]
+      ]
+    }
+  ]
+}
