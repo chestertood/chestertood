@@ -252,10 +252,10 @@ def render(stats, cfg):
     tools = cfg.get("tools", [])
     mid = W // 2
     sx0 = mid + 4 if tools else M
-    p.text(sx0, y, "FIG_003 / TECH STACK", 8, CYAN)
+    p.text(sx0, y, "FIG_004 / TECH STACK", 8, CYAN)
     ye = tags(sx0, W - M, y + 16, cfg["stack"])
     if tools:
-        p.text(M, y, "FIG_004 / TOOLS", 8, CYAN)
+        p.text(M, y, "FIG_003 / TOOLS", 8, CYAN)
         per_row = (mid - 4 - M) // 61  # 61px pitch fits a 7-char label
         for i, t in enumerate(tools):
             row, col = divmod(i, per_row)
