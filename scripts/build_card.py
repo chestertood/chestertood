@@ -42,11 +42,56 @@ MEDALS = [((255, 238, 150), (255, 208, 64), (214, 150, 30), (120, 76, 14)),
           ((240, 170, 100), (205, 127, 50), (150, 85, 30), (84, 44, 16))]
 
 
-def level(xp):
-    """(level, progress 0..1). Level L starts at 4*(L-1)^2 xp."""
-    lv = 1 + math.isqrt(xp // 4)
-    lo, hi = 4 * (lv - 1) ** 2, 4 * lv**2
-    return lv, (xp - lo) / (hi - lo)
+STEP = 50  # ms per GIF frame; every cat pose duration is a multiple of it
+BANNER_W, BANNER_H, HORIZON = W - 2 * M, 48, 30
+# fixed night-scene palette, same in both themes so the banner reads as a screen
+SKY = [(12, 9, 30), (22, 12, 48), (38, 14, 66), (58, 16, 80)]
+SUN = [(255, 216, 74), (255, 170, 60), (255, 120, 90), (255, 80, 150)]  # top -> bottom
+GRID_H, GRID_V, GROUND = (255, 60, 160), (150, 70, 255), (18, 8, 36)
+STARS = [((i * 53 + 11) % BANNER_W, (i * 29 + 5) % (HORIZON - 6), i) for i in range(30)]
+
+
+def banner(t):
+    """Synthwave strip: striped sun, twinkling stars, grid rushing at the viewer, a comet per loop.
+    Own canvas, so nothing it draws can spill onto the card."""
+    img = Image.new("RGB", (BANNER_W, BANNER_H))
+    d = ImageDraw.Draw(img)
+    cx = BANNER_W // 2
+
+    def px(x, y, c):
+        d.point((x, y), fill=c)
+
+    def hline(x1, x2, y, c):
+        d.line([(x1, y), (x2, y)], fill=c)
+
+    for y in range(HORIZON):  # sky bands, darker at the top
+        hline(0, BANNER_W, y, SKY[min(len(SKY) - 1, y * len(SKY) // HORIZON)])
+    for sx, sy, i in STARS:  # period 4 divides 12 steps/loop -> seamless twinkle
+        phase = (i + int(t * 12)) % 4
+        if phase:
+            px(sx, sy, (255, 255, 255) if phase == 1 else (140, 150, 220))
+    r, cut = 20, int(t * 4)  # sun; the dark stripes crawl down 4 steps per loop
+    for dy in range(r):
+        if dy < 12 and (dy + cut) % 4 == 3:
+            continue
+        half = int(math.sqrt(r * r - dy * dy))
+        hline(cx - half, cx + half, HORIZON - 1 - dy, SUN[min(3, (r - 1 - dy) * 4 // r)])
+    for y in range(HORIZON, BANNER_H):
+        hline(0, BANNER_W, y, GROUND)
+    for i in range(-8, 9):  # vertical lines fan out; spread start keeps the horizon from clumping
+        d.line([(cx + i * 7, HORIZON + 1), (cx + i * 44, BANNER_H - 1)], fill=GRID_V)
+    hline(0, BANNER_W, HORIZON, GRID_H)
+    for k in range(6):  # horizontal lines accelerate toward the viewer (z^2 spacing)
+        z = (k + t) / 6
+        y = HORIZON + 1 + round((BANNER_H - HORIZON - 2) * z * z)
+        if y > HORIZON + 1 and y < BANNER_H - 1:
+            hline(0, BANNER_W, y, GRID_H)
+    hx = round(-12 + (BANNER_W + 24) * t)  # comet: enters left, leaves right, once per loop
+    hy = 4 + hx // 18
+    for n in range(12):
+        c = 255 - n * 20
+        px(hx - n * 2, hy - n // 3, (c, c, 255))
+    return img
 
 
 def bar_fill(value, cap):
@@ -177,17 +222,13 @@ def render(stats, cfg):
     y += 20
     p.rule(y)
 
-    # level + stat bars
-    xp = (stats["commits"] + 5 * stats["prs"] + 10 * stats["stars"]
-          + 5 * stats["followers"] + 3 * stats["repos"])
-    lv, prog = level(xp)
+    # animated banner (drawn per frame below) + stat bars
     y += 10
     p.text(M, y, "FIG_001 / STATS", 8, CYAN)
     y += 16
-    p.text(M, y, f"LV {lv:02d}", 24, YELLOW)
-    p.text(W - M, y + 2, f"{xp} XP", 8, DIM, anchor="r")
-    p.blocks(M + 140, y + 14, prog, 20, YELLOW, bw=6, gap=2, h=8)
-    y += 36
+    banner_y = y
+    p.frame(M - 1, y - 1, BANNER_W + 2, BANNER_H + 2, DIM)
+    y += BANNER_H + 12
     caps = cfg["caps"]
     rows = [
         ("STARS", stats["stars"], caps["stars"], YELLOW),
@@ -275,12 +316,16 @@ def render(stats, cfg):
     d.rectangle([0, 0, W - 1, y - 1], outline=PINK, width=2)
     d.rectangle([3, 3, W - 4, y - 4], outline=DIM, width=1)
 
+    # One GIF frame per STEP ms over the cat's whole cycle; the banner is a pure
+    # function of t in [0, 1), so loop end meets loop start.
+    timeline = [sprite for sprite, ms in cat.frames() for _ in range(ms // STEP)]
     out = []
-    for sprite, ms in cat.frames():
+    for i, sprite in enumerate(timeline):
         frame = img.copy()
+        frame.paste(banner(i / len(timeline)), (M, banner_y))
         big = sprite.resize((cat.GW * CAT_PX, cat.GH * CAT_PX), Image.NEAREST)
         frame.paste(big, (W - M - big.width, 38), big)
-        out.append((frame.resize((W * SCALE, y * SCALE), Image.NEAREST), ms))
+        out.append((frame.resize((W * SCALE, y * SCALE), Image.NEAREST), STEP))
     return out
 
 
@@ -291,7 +336,7 @@ if __name__ == "__main__":
         set_theme(theme)
         out = ROOT / "assets" / f"card-{theme}.gif"
         frames = render(stats, cfg)
-        pal = [f.quantize(colors=64, dither=Image.Dither.NONE) for f, _ in frames]
+        pal = [f.quantize(colors=128, dither=Image.Dither.NONE) for f, _ in frames]
         pal[0].save(out, save_all=True, append_images=pal[1:], duration=[ms for _, ms in frames],
                     loop=0, disposal=1)
         print("wrote", out, f"{out.stat().st_size // 1024} KB")

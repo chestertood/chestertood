@@ -14,12 +14,10 @@ STATS = {
 }
 
 
-def test_level_monotonic_and_progress_in_range():
-    prev = 0
-    for xp in range(0, 5000, 7):
-        lv, prog = b.level(xp)
-        assert lv >= prev and 0 <= prog < 1
-        prev = lv
+def test_banner_animates_and_loops_in_whole_steps():
+    frames = b.render(STATS, CFG)
+    assert sum(ms for _, ms in frames) == sum(ms for *_, ms in b.cat.POSES)
+    assert frames[0][0].tobytes() != frames[len(frames) // 2][0].tobytes()
 
 
 def test_bar_fill_bounds():
