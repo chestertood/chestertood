@@ -16,7 +16,7 @@ OUT = Path(__file__).resolve().parent.parent / "assets" / "icons"
 # card label slug -> simple-icons slug
 ICONS = {
     "vscode": "visualstudiocode", "git": "git", "docker": "docker", "postman": "postman",
-    "ollama": "ollama", "autocad": "autocad", "fusion": "autodesk", "wsl": "linux",
+    "ollama": "ollama", "pytorch": "pytorch", "fusion": "autodesk", "wsl": "linux",
 }
 GRID, HI = 16, 128
 
