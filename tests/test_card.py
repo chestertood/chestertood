@@ -46,3 +46,10 @@ def test_render_tools_column_sets_height():
     base = b.render(STATS, CFG)[0][0].height
     many = dict(CFG, tools=["VS Code", "Git", "Docker", "WSL", "Postman", "Ollama", "MATLAB", "AutoCAD", "Fusion 360"])
     assert b.render(STATS, many)[0][0].height > base
+
+
+def test_render_has_no_blank_strip_at_bottom():
+    many = dict(CFG, tools=["VS Code", "Git", "Docker", "WSL", "Postman", "Ollama", "MATLAB", "AutoCAD", "Fusion"])
+    stats = dict(STATS, top_repos=[{"name": f"r{i}", "stars": 0, "languages": [["Python", 1]]} for i in range(6)])
+    f = b.render(stats, many)[0][0].convert("RGB")
+    assert f.getpixel((f.width // 2, f.height - 1 - 3 * b.SCALE)) != (0, 0, 0)  # inside the border, not canvas overflow

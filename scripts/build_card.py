@@ -54,6 +54,14 @@ def bar_fill(value, cap):
     return min(1.0, math.log1p(max(value, 0)) / math.log1p(cap))
 
 
+ICON_DIR = ROOT / "assets" / "icons"
+
+
+def slug(label):
+    """Icon file name for a tool label: 'VS Code' -> 'vscode'."""
+    return "".join(c for c in label.lower() if c.isalnum())
+
+
 def ascii_up(s):
     """Press Start 2P only covers ASCII; anything else becomes '?'."""
     return "".join(c if 32 <= ord(c) < 127 else "?" for c in s).upper()
@@ -110,6 +118,19 @@ class Pen:
         self.rect(x + 3, top + 3, 2, 1, (255, 255, 255))  # glint
         self.text(x + 4, top + 4, str(rank + 1), 8, edge)
 
+    def tile(self, cx, y, label, color):
+        """Framed 16x16 pixel icon with its label centred underneath. No icon file
+        for this label -> its first letter is drawn instead."""
+        self.rect(cx - 12, y, 24, 24, PANEL)
+        self.frame(cx - 12, y, 24, 24, DIM)
+        path = ICON_DIR / f"{slug(label)}.png"
+        if path.exists():
+            self.img.paste(color, (cx - 8, y + 4), Image.open(path))
+        else:
+            self.text(cx - 8, y + 8, label[:1], 8, color)
+        s = ascii_up(truncate(label, 7))
+        self.text(cx - len(s) * 4, y + 28, s, 8, FG)
+
     def rule(self, y):
         for x in range(M, W - M, 4):
             self.rect(x, y, 2, 1, DIM)
@@ -139,7 +160,7 @@ def lang_color(name):
 
 
 def render(stats, cfg):
-    p = Pen(700)
+    p = Pen(1200)  # scratch height; the image is cropped to the drawn content below
     y = 10
     p.text(M, y, "FIG_000 / PLAYER PROFILE", 8, DIM)
     p.text(W - M, y, "@" + cfg["login"], 8, DIM, anchor="r")
@@ -235,7 +256,12 @@ def render(stats, cfg):
     ye = tags(sx0, W - M, y + 16, cfg["stack"])
     if tools:
         p.text(M, y, "FIG_004 / TOOLS", 8, CYAN)
-        ye = max(ye, tags(M, mid - 4, y + 16, tools))
+        per_row = (mid - 4 - M) // 61  # 61px pitch fits a 7-char label
+        for i, t in enumerate(tools):
+            row, col = divmod(i, per_row)
+            ty = y + 16 + row * 46
+            p.tile(M + 30 + col * 61, ty, t, LANG_COLORS[i % len(LANG_COLORS)])
+            ye = max(ye, ty + 20)  # tile + label end at ty + 36; +28 below leaves the usual gap
     y = ye + 28
     p.rule(y)
 
