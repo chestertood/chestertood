@@ -40,3 +40,9 @@ def test_static_node_matches_api_shape():
     n = f.static_node("p", {"Python": 3, "CSS": 1})
     assert n["stargazerCount"] == 0
     assert [(e["node"]["name"], e["size"]) for e in n["languages"]["edges"]] == [("Python", 3), ("CSS", 1)]
+
+
+def test_render_tools_column_sets_height():
+    base = b.render(STATS, CFG)[0][0].height
+    many = dict(CFG, tools=["VS Code", "Git", "Docker", "WSL", "Postman", "Ollama", "MATLAB", "AutoCAD", "Fusion 360"])
+    assert b.render(STATS, many)[0][0].height > base

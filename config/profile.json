@@ -10,6 +10,17 @@
     "React",
     "C#"
   ],
+  "tools": [
+    "VS Code",
+    "Git",
+    "Docker",
+    "WSL",
+    "Postman",
+    "Ollama",
+    "MATLAB",
+    "AutoCAD",
+    "Fusion 360"
+  ],
   "caps": {
     "stars": 50,
     "commits": 1000,

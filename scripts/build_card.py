@@ -214,19 +214,29 @@ def render(stats, cfg):
         y += 20
     p.rule(y)
 
-    # tech stack
+    # tools (left) + tech stack (right); stack takes the full width when there are no tools
+    def tags(x0, x1, y, items):
+        """Draw wrapped tag boxes in [x0, x1]; returns the y of the last row."""
+        x = x0
+        for t in items:
+            w = len(t) * 8 + 12
+            if x + w > x1 and x > x0:
+                x, y = x0, y + 20
+            p.frame(x, y, w, 16, PINK)
+            p.text(x + 6, y + 4, t, 8, FG)
+            x += w + 6
+        return y
+
     y += 10
-    p.text(M, y, "FIG_003 / TECH STACK", 8, CYAN)
-    y += 16
-    x = M
-    for t in cfg["stack"]:
-        w = len(t) * 8 + 12
-        if x + w > W - M:
-            x, y = M, y + 20
-        p.frame(x, y, w, 16, PINK)
-        p.text(x + 6, y + 4, t, 8, FG)
-        x += w + 6
-    y += 28
+    tools = cfg.get("tools", [])
+    mid = W // 2
+    sx0 = mid + 4 if tools else M
+    p.text(sx0, y, "FIG_003 / TECH STACK", 8, CYAN)
+    ye = tags(sx0, W - M, y + 16, cfg["stack"])
+    if tools:
+        p.text(M, y, "FIG_004 / TOOLS", 8, CYAN)
+        ye = max(ye, tags(M, mid - 4, y + 16, tools))
+    y = ye + 28
     p.rule(y)
 
     y += 10
