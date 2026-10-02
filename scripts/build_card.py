@@ -35,11 +35,6 @@ def set_theme(name):
 
 
 set_theme("light")
-RIBBON = ((235, 60, 70), (170, 28, 45), (255, 130, 130))  # base / shade / highlight
-# metals: (light, base, dark, edge) for gold / silver / bronze
-MEDALS = [((255, 238, 150), (255, 208, 64), (214, 150, 30), (120, 76, 14)),
-          ((245, 247, 255), (205, 210, 225), (150, 156, 180), (78, 82, 108)),
-          ((240, 170, 100), (205, 127, 50), (150, 85, 30), (84, 44, 16))]
 
 
 STEP = 50  # ms per GIF frame; every cat pose duration is a multiple of it
@@ -138,30 +133,11 @@ class Pen:
         for i in range(t):
             self.d.rectangle([x + i, y + i, x + w - 1 - i, y + h - 1 - i], outline=color)
 
-    def medal(self, x, y, rank, d=16):
-        """Bevelled pixel medal on a red V ribbon; rank 0/1/2 = gold/silver/bronze."""
-        light, base, dark, edge = MEDALS[rank]
-        top = y - 2  # coin top; ribbon tucks under it
-        for k in range(9):
-            s = min(k, 4)
-            self.rect(x + d - 5 - s, top - 8 + k, 3, 1, RIBBON[1])
-            self.rect(x + 2 + s, top - 8 + k, 3, 1, RIBBON[0])
-            self.rect(x + 2 + s, top - 8 + k, 1, 1, RIBBON[2])
-        c = (d - 1) / 2
-        for j in range(d):
-            for i in range(d):
-                r = math.hypot(i - c, j - c)
-                if r > d / 2:
-                    continue
-                if r > d / 2 - 1:
-                    col = edge
-                elif r > d / 2 - 2.6:
-                    col = light if i + j < d - 1 else dark  # bevel: lit top-left, shaded bottom-right
-                else:
-                    col = base
-                self.rect(x + i, top + j, 1, 1, col)
-        self.rect(x + 3, top + 3, 2, 1, (255, 255, 255))  # glint
-        self.text(x + 4, top + 4, str(rank + 1), 8, edge)
+    def slot(self, x, y, n, color):
+        """Save-slot badge: two-digit number in a 24x14 frame."""
+        self.rect(x, y, 24, 14, PANEL)
+        self.frame(x, y, 24, 14, color)
+        self.text(x + 4, y + 3, f"{n:02d}", 8, color)
 
     def tile(self, cx, y, label, color):
         """Framed 16x16 pixel icon with its label centred underneath. No icon file
@@ -250,13 +226,12 @@ def render(stats, cfg):
     p.text(M, y, "FIG_002 / TOP REPOS", 8, CYAN)
     y += 16
     for i, r in enumerate(stats["top_repos"][:6]):
-        if i < len(MEDALS):  # only the first three get a medal
-            p.medal(W - M - 16, y, i)
+        shares = lang_shares(r["languages"])
+        p.slot(W - M - 24, y - 3, i + 1, lang_color(shares[0][0]) if shares else DIM)
         p.text(M, y, "> " + truncate(r["name"], 34), 8, FG)
         y += 14
-        shares = lang_shares(r["languages"])
         if shares:
-            x, bar_w = M, W - 2 * M - 28  # leave room for the medal
+            x, bar_w = M, W - 2 * M - 28  # leave room for the slot badge
             for j, (name, frac) in enumerate(shares):
                 w = max(2, round(bar_w * frac)) if j < len(shares) - 1 else M + bar_w - x
                 p.rect(x, y, w, 8, lang_color(name))

@@ -1,7 +1,7 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/card-dark.gif" />
-    <img src="./assets/card-light.gif" alt="Chester. ML Engineer, AI and Robotics, Khon Kaen University. Animated pixel-style player card: a white cat licking its paw, GitHub stats, top 3 repositories with gold, silver and bronze medals, and tech stack Python, LLM, CV, React, C#." width="100%" />
+    <img src="./assets/card-light.gif" alt="Chester. ML Engineer, AI and Robotics, Khon Kaen University. Animated pixel-style player card: a white cat licking its paw, GitHub stats, six featured repositories numbered 01 to 06 with language bars, tools, and tech stack Python, LLM, CV, React, C#." width="100%" />
   </picture>
 </p>
 

@@ -54,7 +54,7 @@ def fetch(login, exclude=(), featured=(), static=None):
     repos = [r for r in user["repositories"]["nodes"] if r["name"] not in exclude]
     by_name = {r["name"]: r for r in repos}
     by_name.update({n: static_node(n, langs) for n, langs in static.items() if n not in by_name})
-    top = [by_name[n] for n in featured if n in by_name]  # medal order = config order
+    top = [by_name[n] for n in featured if n in by_name]  # slot order = config order
     if not top:
         top = sorted(repos, key=lambda r: r["pushedAt"], reverse=True)
         top.sort(key=lambda r: r["stargazerCount"], reverse=True)  # stable: ties stay newest-first
