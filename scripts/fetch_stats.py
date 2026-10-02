@@ -64,7 +64,7 @@ def fetch(login, exclude=(), featured=()):
         "top_repos": [
             {"name": r["name"], "stars": r["stargazerCount"],
              "languages": [(e["node"]["name"], e["size"]) for e in r["languages"]["edges"]]}
-            for r in top[:3]
+            for r in top[:6]
         ],
     }
 

@@ -15,3 +15,10 @@
 </p>
 
 <p align="center"><sub>The card above refreshes automatically from public GitHub data. Source: <code>scripts/</code> + <code>config/profile.json</code>.</sub></p>
+
+## Projects
+
+| Project | What it does | Stack |
+| --- | --- | --- |
+| [**computer_vision** (Object Tracker)](https://github.com/chestertood/computer_vision) | Count and track vehicles in video: draw an ROI and counting line, run YOLO detection and tracking, get an annotated video plus per-vehicle crops | Python, YOLO, FastAPI, React |
+| [**job_scrapper**](https://github.com/chestertood/job_scrapper) | Fastwork jobboard viewer with an auto-apply helper | Python, Playwright, React |

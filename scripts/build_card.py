@@ -187,8 +187,9 @@ def render(stats, cfg):
     y += 10
     p.text(M, y, "FIG_002 / TOP REPOS", 8, CYAN)
     y += 16
-    for i, r in enumerate(stats["top_repos"][:3]):
-        p.medal(W - M - 16, y, i)
+    for i, r in enumerate(stats["top_repos"][:6]):
+        if i < len(MEDALS):  # only the first three get a medal
+            p.medal(W - M - 16, y, i)
         p.text(M, y, "> " + truncate(r["name"], 34), 8, FG)
         y += 14
         shares = lang_shares(r["languages"])
