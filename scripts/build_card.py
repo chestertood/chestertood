@@ -134,10 +134,9 @@ class Pen:
             self.d.rectangle([x + i, y + i, x + w - 1 - i, y + h - 1 - i], outline=color)
 
     def slot(self, x, y, n, color):
-        """Save-slot badge: two-digit number in a 24x14 frame."""
-        self.rect(x, y, 24, 14, PANEL)
-        self.frame(x, y, 24, 14, color)
-        self.text(x + 4, y + 3, f"{n:02d}", 8, color)
+        """Arcade-score slot number: big two-digit 16px text with a 2px drop shadow."""
+        self.text(x - 6, y, f"{n:02d}", 16, PANEL)
+        self.text(x - 8, y - 2, f"{n:02d}", 16, color)  # ends flush with the right margin
 
     def tile(self, cx, y, label, color):
         """Framed 16x16 pixel icon with its label centred underneath. No icon file
