@@ -24,26 +24,6 @@
       ]
     },
     {
-      "name": "Lung_cancer_risk_project",
-      "stars": 1,
-      "languages": [
-        [
-          "Python",
-          61912
-        ]
-      ]
-    },
-    {
-      "name": "Machine_Program-C--WPF-",
-      "stars": 1,
-      "languages": [
-        [
-          "C#",
-          164100
-        ]
-      ]
-    },
-    {
       "name": "AgentQuant",
       "stars": 0,
       "languages": [
@@ -118,6 +98,26 @@
         [
           "VBScript",
           291
+        ]
+      ]
+    },
+    {
+      "name": "Lung_cancer_risk_project",
+      "stars": 1,
+      "languages": [
+        [
+          "Python",
+          61912
+        ]
+      ]
+    },
+    {
+      "name": "Machine_Program-C--WPF-",
+      "stars": 1,
+      "languages": [
+        [
+          "C#",
+          164100
         ]
       ]
     }
