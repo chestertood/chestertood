@@ -33,3 +33,10 @@ def test_render_empty_account_and_non_ascii():
     frames = b.render(stats, CFG)
     assert len(frames) > 1
     assert all(f.width == b.W * b.SCALE and f.height > 0 for f, _ in frames)
+
+
+def test_static_node_matches_api_shape():
+    import fetch_stats as f
+    n = f.static_node("p", {"Python": 3, "CSS": 1})
+    assert n["stargazerCount"] == 0
+    assert [(e["node"]["name"], e["size"]) for e in n["languages"]["edges"]] == [("Python", 3), ("CSS", 1)]

@@ -26,5 +26,12 @@
     "AgentQuant",
     "computer_vision",
     "job_scrapper"
-  ]
+  ],
+  "staticRepos": {
+    "AgentQuant": {
+      "Python": 149589,
+      "JavaScript": 67486,
+      "CSS": 17377
+    }
+  }
 }

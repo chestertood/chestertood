@@ -4,7 +4,7 @@
   "followers": 2,
   "repos": 13,
   "stars": 14,
-  "commits": 117,
+  "commits": 118,
   "prs": 1,
   "issues": 0,
   "reviews": 0,
@@ -40,6 +40,24 @@
         [
           "C#",
           164100
+        ]
+      ]
+    },
+    {
+      "name": "AgentQuant",
+      "stars": 0,
+      "languages": [
+        [
+          "Python",
+          149589
+        ],
+        [
+          "JavaScript",
+          67486
+        ],
+        [
+          "CSS",
+          17377
         ]
       ]
     },
