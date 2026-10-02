@@ -4,7 +4,7 @@
   "followers": 2,
   "repos": 13,
   "stars": 14,
-  "commits": 116,
+  "commits": 115,
   "prs": 1,
   "issues": 0,
   "reviews": 0,
@@ -40,6 +40,66 @@
         [
           "C#",
           164100
+        ]
+      ]
+    },
+    {
+      "name": "computer_vision",
+      "stars": 0,
+      "languages": [
+        [
+          "JavaScript",
+          49920
+        ],
+        [
+          "Python",
+          29622
+        ],
+        [
+          "CSS",
+          20002
+        ],
+        [
+          "PowerShell",
+          4852
+        ],
+        [
+          "HTML",
+          679
+        ],
+        [
+          "VBScript",
+          295
+        ]
+      ]
+    },
+    {
+      "name": "job_scrapper",
+      "stars": 0,
+      "languages": [
+        [
+          "Python",
+          34189
+        ],
+        [
+          "JavaScript",
+          28827
+        ],
+        [
+          "CSS",
+          11504
+        ],
+        [
+          "PowerShell",
+          2336
+        ],
+        [
+          "HTML",
+          580
+        ],
+        [
+          "VBScript",
+          291
         ]
       ]
     }
