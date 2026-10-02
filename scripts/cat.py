@@ -1,7 +1,7 @@
 """Pixel white cat licking its paw. frames() -> list of (RGBA image, ms) on a GW x GH grid."""
 from PIL import Image
 
-GW, GH = 22, 20
+GW, GH = 23, 20  # tail reaches x=21; the extra column holds its right outline
 W, G, P, E = (250, 250, 255), (176, 178, 208), (255, 130, 170), (40, 36, 64)
 
 
