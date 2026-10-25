@@ -4,7 +4,7 @@
   "followers": 2,
   "repos": 13,
   "stars": 13,
-  "commits": 146,
+  "commits": 147,
   "prs": 1,
   "issues": 0,
   "reviews": 0,
@@ -15,7 +15,11 @@
       "languages": [
         [
           "Python",
-          301510
+          301867
+        ],
+        [
+          "Shell",
+          493
         ],
         [
           "Batchfile",
