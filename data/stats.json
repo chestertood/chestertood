@@ -2,9 +2,9 @@
   "login": "chestertood",
   "fetched_at": "2026-11-12",
   "followers": 2,
-  "repos": 14,
-  "stars": 14,
-  "commits": 150,
+  "repos": 15,
+  "stars": 16,
+  "commits": 166,
   "prs": 1,
   "issues": 0,
   "reviews": 0,
@@ -28,26 +28,38 @@
       ]
     },
     {
-      "name": "AgentQuant",
-      "stars": 0,
+      "name": "QuantPa",
+      "stars": 1,
       "languages": [
         [
           "Python",
-          149589
+          134479
         ],
         [
           "JavaScript",
-          67486
+          72838
         ],
         [
           "CSS",
-          17377
+          20218
+        ],
+        [
+          "Batchfile",
+          2542
+        ],
+        [
+          "VBScript",
+          2032
+        ],
+        [
+          "HTML",
+          929
         ]
       ]
     },
     {
       "name": "computer_vision",
-      "stars": 0,
+      "stars": 1,
       "languages": [
         [
           "JavaScript",
