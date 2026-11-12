@@ -2,7 +2,7 @@
   "login": "chestertood",
   "fetched_at": "2026-11-12",
   "followers": 2,
-  "repos": 15,
+  "repos": 14,
   "stars": 16,
   "commits": 166,
   "prs": 1,
@@ -84,36 +84,6 @@
         [
           "VBScript",
           295
-        ]
-      ]
-    },
-    {
-      "name": "job_scrapper",
-      "stars": 0,
-      "languages": [
-        [
-          "Python",
-          34189
-        ],
-        [
-          "JavaScript",
-          28827
-        ],
-        [
-          "CSS",
-          11504
-        ],
-        [
-          "PowerShell",
-          2336
-        ],
-        [
-          "HTML",
-          580
-        ],
-        [
-          "VBScript",
-          291
         ]
       ]
     },
