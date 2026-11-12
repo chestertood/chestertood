@@ -32,17 +32,10 @@
   ],
   "featuredRepos": [
     "smart-fertilizer-ai",
-    "AgentQuant",
+    "QuantPa",
     "computer_vision",
     "job_scrapper",
     "Lung_cancer_risk_project",
     "Machine_Program-C--WPF-"
-  ],
-  "staticRepos": {
-    "AgentQuant": {
-      "Python": 149589,
-      "JavaScript": 67486,
-      "CSS": 17377
-    }
-  }
+  ]
 }
